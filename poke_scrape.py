@@ -13,6 +13,6 @@ def get_num():
     table = soup.find('table', attrs={'class':'roundy'})
     data = table.find('th')
     pokedex_number = data.text.strip()
-    return pokedex_number
+    return int(pokedex_number[1:])
 
 print(f"Pokedex number: {get_num()}")
